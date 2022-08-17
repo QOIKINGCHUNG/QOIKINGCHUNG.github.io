@@ -8,97 +8,12 @@
     <title>webgltest</title>
     <script defer="defer" src="/js/chunk-vendors.5bf1cb99.js"></script>
     <script defer="defer" src="/js/app.0ea6f251.js"></script>
-    <script
-      type="text/javascript"
-      src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"
-    ></script>
     <link href="/css/app.1790c619.css" rel="stylesheet" />
   </head>
   <body>
-    <script>
-      $(function () {
-        //创建分享
-        function funcShare() {
-          $.ajax({
-            async: false,
-            url: "../ShareHandler.ashx",
-            data: {
-              dataurl: location.href.split("#")[0],
-            },
-            success: function (res) {
-              var json = eval("(" + res + ")");
-              console.log(json);
-              var jsApiList = [
-                "onMenuShareTimeline",
-                "onMenuShareAppMessage",
-                "onMenuShareQQ",
-                "onMenuShareWeibo",
-                "onMenuShareQZone",
-              ];
-              wx.config({
-                debug: false,
-                appId: json.wxappid,
-                timestamp: json.timestamp,
-                nonceStr: json.noncestr,
-                signature: json.strSige,
-                jsApiList: jsApiList,
-              });
-            },
-          });
-        }
-        //签名完成
-        wx.ready(function () {
-          // console.log("验证完成！！！");
-          //分享的头部标题
-          var title = "标题";
-          //分享的内容
-          var desc = "baidu.com";
-          var link = location.href.split("#")[0];
-          //分享要显示的右下角小图片
-          var imgUrl =
-            "http://www.to-morrow.com/attractInvestment/img/logo.png";
-          //朋友圈
-          wx.onMenuShareTimeline({
-            title: title,
-            link: link,
-            imgUrl: imgUrl,
-          });
-          //朋友
-          wx.onMenuShareAppMessage({
-            title: title,
-            desc: desc,
-            link: link,
-            imgUrl: imgUrl,
-          });
-          //QQ
-          wx.onMenuShareQQ({
-            title: title,
-            desc: desc,
-            link: link,
-            imgUrl: imgUrl,
-          });
-          //微博
-          wx.onMenuShareWeibo({
-            title: title,
-            desc: desc,
-            link: link,
-            imgUrl: imgUrl,
-          });
-          //QQ空间
-          wx.onMenuShareQZone({
-            title: title,
-            desc: desc,
-            link: link,
-            imgUrl: imgUrl,
-          });
-        });
-        funcShare();
-      });
-    </script>
+    <div id="wx_logo" style="margin: 0 auto; display: none">
+      <img src="assetes\48a19135c2fa849bedcfd71ff6dce2e9.jpeg" />
+    </div>
     <noscript
       ><strong
         >We're sorry but webgltest doesn't work properly without JavaScript
