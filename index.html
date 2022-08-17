@@ -8,7 +8,7 @@
     <title>深圳南山区酒店公寓</title>
     <meta
       content="深圳南山区酒店公寓,带给你酒店搬得公寓出租"
-      name="description"
+      name="desc"
     />
   </head>
   <body>
@@ -38,41 +38,6 @@
         url: "http:\/\/xueweitong.weiwochina.com\/",
         signature: "96d8059c4e0cb74bf1c31899bc8d38ccc8a975f7",
         openTagList: ["wx-open-launch-weapp"],
-      });
-    </script>
-    <script>
-      wx.ready(function () {
-        //需在用户可能点击分享按钮前就先调用
-        wx.updateAppMessageShareData({
-          title: "2022年深圳积分入学计算器", // 分享标题
-          desc: "2022年深圳积分入学计算器", // 分享描述
-          link: window.location.href,
-          imgUrl: window.location.href + "/public/image/logo3.jpg",
-        });
-        wx.updateTimelineShareData({
-          title: "2022年深圳积分入学计算器", // 分享标题
-          link: window.location.href,
-          imgUrl: window.location.href + "/public/image/logo3.jpg",
-        });
-        wx.onMenuShareTimeline({
-          title: "2022年深圳积分入学计算器", // 分享标题
-          link: window.location.href,
-          imgUrl: window.location.href + "/public/image/logo3.jpg",
-        });
-        wx.onMenuShareAppMessage({
-          title: "2022年深圳积分入学计算器", // 分享标题
-          desc: "2022年深圳积分入学计算器", // 分享描述
-          link: window.location.href,
-          imgUrl: window.location.href + "/public/image/logo3.jpg",
-        });
-
-        var btn = document.getElementById("launch-btn");
-        btn.addEventListener("launch", function (e) {
-          console.log("success");
-        });
-        btn.addEventListener("error", function (e) {
-          console.log("fail", e.detail);
-        });
       });
     </script>
     <noscript>
